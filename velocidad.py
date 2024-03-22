@@ -5,15 +5,17 @@ velocidad = [25, 12, 19, 16, 11, 11, 24, 1,
 10, 5, 23, 3, 5, 9, 5, 3, 12, 20, 5,
 11, 10, 18, 10, 14, 5, 23, 20, 23, 21]
 
-posiciones = []
 
-filtrado = []
-i = []
+def posiciones(velocidad):
+    cinta_a_disminuir = []
+    #saco el promedio
+    promedio = sum(velocidad) / len(velocidad)
 
-for elemento in velocidad:
-    i += 1
-    print(elemento)
-    posiciones.append(elemento)
-    print(i)
 
-print(posiciones)
+    for posicion, cinta in enumerate(velocidad):
+        if cinta > promedio:
+            cinta_a_disminuir.append(posicion)
+    return cinta_a_disminuir
+
+
+print(posiciones(velocidad))
