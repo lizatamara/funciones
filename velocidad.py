@@ -8,9 +8,7 @@ velocidad = [25, 12, 19, 16, 11, 11, 24, 1,
 
 def posiciones(velocidad):
     cinta_a_disminuir = []
-    #saco el promedio
     promedio = sum(velocidad) / len(velocidad)
-
 
     for posicion, cinta in enumerate(velocidad):
         if cinta > promedio:
